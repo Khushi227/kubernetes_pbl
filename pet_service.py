@@ -52,7 +52,7 @@ def adopt_pet(pet_id: int, user_id: int):
         raise HTTPException(status_code=400, detail="Pet is already adopted")
 
     # Validate the user ID by calling the User Service
-    user_service_url = f"http://127.0.0.1:8000/users/{user_id}"
+    user_service_url = f"https://pet-service-ra5g.onrender.com/users/{user_id}"
     try:
         response = requests.get(user_service_url, timeout=5)
     except requests.exceptions.RequestException:
