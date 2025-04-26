@@ -1,5 +1,6 @@
-fastapi
-uvicorn
-requests
-python-jose
-passlib
+fastapi==0.95.1
+uvicorn==0.21.1
+passlib[bcrypt]==1.7.4
+python-jose==3.3.0
+pydantic==1.10.7
+requests==2.31.0
