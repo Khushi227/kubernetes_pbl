@@ -1,6 +1,8 @@
-fastapi==0.95.1
-uvicorn==0.21.1
-passlib[bcrypt]==1.7.4
-python-jose==3.3.0
-pydantic==1.10.7
-requests==2.31.0
+fastapi
+uvicorn[standard]  # For running the FastAPI application
+SQLAlchemy  # ORM for database interaction
+psycopg2-binary  # PostgreSQL adapter for Python
+passlib[bcrypt] # For password hashing
+jose  # For JWT encoding and decoding
+requests  # For making HTTP requests between services
+python-dotenv # For loading environment variables (if you choose to use a .env file locally)
