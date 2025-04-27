@@ -2,7 +2,7 @@ fastapi
 uvicorn[standard]  # For running the FastAPI application
 SQLAlchemy  # ORM for database interaction
 psycopg2-binary  # PostgreSQL adapter for Python
-passlib[bcrypt] # For password hashing
+passlib # For password hashing
 python-jose  # For JWT encoding and decoding
 requests  # For making HTTP requests between services
 python-dotenv # For loading environment variables (if you choose to use a .env file locally)
