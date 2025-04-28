@@ -142,7 +142,7 @@ def list_pets(db: Session = Depends(get_db)):
     return pets
 
 # Adopt a pet
-@app.post("/pets/{pet_id}/adopt")
+@app.post("/pets/{pet_id}/adopt/{user_id}")
 def adopt_pet(pet_id: int, user_id: int, authorization: str = Header(None), db: Session = Depends(get_db)):
     if authorization is None or not authorization.startswith("Bearer "):
         raise HTTPException(status_code=401, detail="Authorization header missing or invalid")
