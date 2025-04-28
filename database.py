@@ -9,8 +9,12 @@ DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./test.db")
 # Create the engine
 engine = create_engine(
     DATABASE_URL,
+    pool_size=10,  # Number of connections to keep in the pool
+    max_overflow=20,  # Maximum number of connections allowed beyond pool_size
+    pool_recycle=3600,  # Recycle connections after this many seconds (e.g., 1 hour)
     connect_args={"check_same_thread": False} if "sqlite" in DATABASE_URL else {}
 )
+
 
 # Enable SQLite Foreign Key Constraints
 if "sqlite" in DATABASE_URL:
