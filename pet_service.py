@@ -37,7 +37,7 @@ Base = declarative_base()
 # JWT Configuration
 SECRET_KEY = os.getenv("SECRET_KEY", "replace_this_with_a_secure_key")
 ALGORITHM = "HS256"
-USER_SERVICE_URL = os.getenv("USER_SERVICE_URL", "http://127.0.0.1:8000/users")
+USER_SERVICE_URL = os.getenv("USER_SERVICE_URL", "https://pet-service-ra5g.onrender.com/users")
 
 # Database Models
 class PetDB(Base):
