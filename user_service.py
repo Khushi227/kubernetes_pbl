@@ -13,7 +13,7 @@ from typing import List
 app = FastAPI()
 
 # Database Configuration
-DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./test.db")  # Use SQLite for local testing, replace for production
+DATABASE_URL = os.environ["DATABASE_URL"]  # Use SQLite for local testing, replace for production
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
