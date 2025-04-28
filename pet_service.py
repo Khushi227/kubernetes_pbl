@@ -9,7 +9,6 @@ from datetime import datetime
 import os
 import requests
 import logging
-from database import get_current_user
 
 # Logging Setup
 logging.basicConfig(level=logging.INFO)
