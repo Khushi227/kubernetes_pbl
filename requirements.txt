@@ -6,4 +6,4 @@ passlib # For password hashing
 python-jose  # For JWT encoding and decoding
 requests  # For making HTTP requests between services
 python-dotenv # For loading environment variables (if you choose to use a .env file locally)
-bcrypt
+bcrypt==3.2.0
